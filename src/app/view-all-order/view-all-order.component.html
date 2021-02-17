@@ -1,0 +1,71 @@
+<h1 align="center">All Orders</h1>
+<div class="row justify-content-center">
+
+  <div class="col-sm-4 text-left bg-white rounded">
+  <div class="row">
+    <div class="col-sm">
+      <a routerLinkActive="Active" routerLink="/admindashboard" class="btn btn-secondary">Admin DashBoard</a>
+    </div>
+    <div class="col-sm">
+      <a routerLinkActive="Active" routerLink="/Update-Restaurant" class="btn btn-secondary">Restaurant Management</a>
+    </div>
+  </div>
+</div>
+</div>
+
+  <div id="background">
+     
+    <h5 align="center"> {{msg}}</h5>
+
+      <br>
+      <div class="row justify-content-center">
+        <div class="col-sm-12 text-left bg-white rounded shadow py-13">
+          <table class="table table-striped">
+            <thead class="thead-dark">
+              <tr class="text-danger">
+                <th>Order Id</th>
+                <th>Order Date : Time</th>
+                <th>Order Status</th>
+                <th>Quantity </th>
+                <th>Total Price </th>
+                <th>User Address  </th>
+          
+                <th>Action</th>   
+                <th>Action</th>
+                <th>Action</th>        
+              </tr>
+            </thead>
+            <tr *ngFor="let order of orderDetails | paginate:{id:'listing_pagination',
+            itemsPerPage:6,
+            currentPage:page,
+            totalItems:totalRecords}">
+              <td>{{order.orderId}}</td>
+              <td>{{order.orderDateTime}}</td>
+              <td>{{order.orderStatus}}</td>
+              <td>{{order.quantity}}</td>
+              <td>{{order.totalCost}}</td>
+              <td>{{order.userAddress}}</td>
+              
+              
+               
+               <td><button (click) = "acceptOrder(order.orderId)" type="button" class="btn btn-success">Accept Order</button></td>
+            <td>
+                <button (click)="rejectOrder(order.orderId)" type="button" class="btn btn-danger">Reject Order</button>
+              </td> 
+
+              <td>
+                <button (click)="orderOutForDelivery(order.orderId)" type="button" class="btn btn-warning">Out for Delivery</button>
+              </td> 
+       
+            </tr>
+          </table>
+          <div align="center">
+            <pagination-controls id="listing_pagination" maxSize="5" directionLinks="true" (pageChange)="page=$event"></pagination-controls>
+          </div>
+        </div>
+      </div>
+      </div>
+    
+      
+  
+  

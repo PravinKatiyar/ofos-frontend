@@ -1,0 +1,63 @@
+<body>
+<div>
+    <h1 align="center">ADD RESTAURANT</h1>
+</div>
+<br>
+<div>
+    <h2 align="center">{{ message }}</h2>
+</div>
+<br>
+
+<div align="center">
+    <table style="width:26% ">
+        <tr><td>
+    <label for="exampleInputEmail1"><h5>Restaurant Name: </h5></label>
+</td><td>
+    <input type="text" name="restaurantname" required [(ngModel)]="restaurant.restaurantName" ngModel class="form-group" 
+    required placeholder="Restaurant Name" #restaurantnameRef='ngModel'pattern="[A-Z]{1}[[A-Za-z ]{1,}]"  /><br>
+    <!-- <div class="text-danger" *ngIf='!restaurantnameRef.valid &&restaurantnameRef.touched'> RestaurantName should
+    be minimum of 4 characters length </div> -->
+</td></tr>
+<tr><td>
+    <label for="exampleInputEmail1"><h5>Owner Name  : </h5></label>
+</td><td>
+    <input type="text" minlength="2"  name="restaurantownername" required [(ngModel)]="restaurant.ownerName" ngModel 
+    required placeholder="Owner Name" #restaurantownernameRef='ngModel' pattern="[A-Z]{1}[[A-Za-z ]{1,}]"/><br><br>
+    <!-- <div class="text-danger" *ngIf='!restaurantownernameRef.valid &&restaurantownernameRef.touched && restaurantownernameRef.errors'>
+    RestaurantOwnerName should be minimum of 2 characters length</div> -->
+</td></tr>
+<tr><td>    <label for="exampleInputEmail1"><h5>Phone Number  : </h5></label>
+</td><td>
+    <input type="number"   name="restaurantphonenumber" required [(ngModel)]="restaurant.phoneNumber" ngModel required
+     placeholder="Phone Number" #restaurantphonenumberRef='ngModel' pattern="[9]{1}[0-9]{9}}]"/><br><br>
+     <!-- <div class="text-danger" *ngIf='!restaurantphonenumberRef.valid && restaurantphonenumberRef.touched && restaurantphonenumberRef.errors'>
+         RestaurantPhoneNumber should be Valid</div> -->
+        </td></tr>
+    <tr><td>
+         <label for="exampleInputEmail1"><h5>Email:</h5></label>
+</td><td>
+         <input type="text" name="restaurantemail"  required [(ngModel)]="restaurant.email" ngModel required placeholder="Restaurant Email" 
+     #restaurantemailRef='ngModel'pattern="[a-zA-Z][a-z0-9.]+@[a-z.]+\.[a-z]{2,}$"/><br><br>
+     <!-- <div class="text-danger" *ngIf='!restaurantemailRef.valid && restaurantemailRef.touched && restaurantemailRef.errors'>RestaurantEmail
+          should be Valid</div> -->
+
+     </td>
+     </tr>
+     <tr><td>
+          <label for="exampleInputEmail1"><h5>Address: </h5></label>
+        </td>
+        <td>
+    <input type="text" name="resturantaddress"required [(ngModel)]="restaurant.address" ngModel required  placeholder="Address" #addressRef='ngModel' pattern="^\d+\s[A-z]+\s[A-z]+"/><br><br>
+    <!-- <div class="text-danger" *ngIf='!addressRef.valid && addressRef.touched && addressRef.errors'>Enter address</div> -->
+        </td>
+        </tr>
+</table>  
+    <input type="button" value="Create Restaurant" (click)="RegisterRestaurant()" class="btn btn-success"/>
+</div>  
+<br>
+<br>
+<br>
+<br>
+<br>
+
+</body>

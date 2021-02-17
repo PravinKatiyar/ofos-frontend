@@ -1,0 +1,28 @@
+
+<div align="center" class="table">
+    <h2><u>Restaurant Details  :</u></h2><br>
+    <table border="2">
+        <tr>
+           <th>Id</th>
+           <th>Restaurant Name</th>
+           <th>Owner Name</th>
+           <th>Phone Number</th>
+           <th>Email</th>
+          <th>Address</th>
+          <th>View Food Items</th>
+          </tr>
+        <tr *ngFor="let restaurant of restaurants">
+             <td>{{restaurant.restaurantId}}</td>
+            <td>{{restaurant.restaurantName}}</td>
+            <td>{{restaurant.ownerName}}</td>
+            <td>{{restaurant.phoneNumber}}</td>
+            <td>{{restaurant.email}}</td>
+            <td>{{restaurant.address}}</td>
+            <td><a routerLinkActive="Active" routerLink="#" class="btn btn-success">View FoodItems</a></td>
+
+        
+        </tr>
+    </table>
+</div>
+
+   

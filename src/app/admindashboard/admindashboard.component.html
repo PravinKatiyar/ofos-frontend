@@ -1,0 +1,53 @@
+<div class="row justify-content-center admin">
+    <br>
+   
+  <div class="col-sm-10 text-left bg-white rounded shadow py-13">
+      <div id="div1" class="p-3 mb-2 text-white">
+        <h2>Welcome, {{user.firstName}}</h2>
+        <h6>Role: {{user.role}}</h6>
+      </div>
+      
+      <div class="row">
+         
+          <div class="col-sm-6">
+              <div class="card">
+                <img class="card-img" src="../../assets/restaurant.jpg" height="200px" width="150" alt="Card image">
+                <div class="card-img-overlay">
+                      <h3 class="card-title"><strong>Restaurant Management</strong></h3>
+                      <br>
+                      <a routerLinkActive="Active" routerLink="/Update-Restaurant" class="btn btn-primary">Manage Restaurant</a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="card">
+              <img class="card-img" src="../../assets/manageorders.jpg" height="200px" width="150" alt="Card image">
+              <div class="card-img-overlay">
+                    <h3 class="card-title"><strong>Order Management</strong></h3>
+                    <br>
+                    <a routerLinkActive="Active" routerLink="/viewAllOrders" class="btn btn-primary">Manage Order
+                        </a>
+                </div>
+            </div>
+        </div>
+      </div>
+      <br>
+      <div class="col-sm-6">
+        <div class="card">
+          <img class="card-img" src="../../assets/deliveryguy.jpg" height="200px" width="150" alt="Card image">
+          <div class="card-img-overlay">
+                <h3 class="card-title">Delivery  Management</h3>
+                <br>
+                <a routerLinkActive="Active" routerLink="/deliveryOrder" class="btn btn-primary">Manage Delivery Guy</a>
+            </div>
+        </div>
+    </div>
+    <br>
+</div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br><br>
+      <br>
+  </div>

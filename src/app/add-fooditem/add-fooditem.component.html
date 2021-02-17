@@ -1,0 +1,69 @@
+<body>
+<div class="row justify-content-center"><h1>ADD NEW ITEM</h1></div>
+<div class="row justify-content-center">
+  <div class="col-sm-4 text-left bg-muted rounded shadow py-3">
+    <p class="text-danger"><small></small></p>
+    <form #addForm="ngForm">
+<!-- 
+     <div class="form-group">
+        <label for="restaurantId">Restaurant Id<sup>*</sup></label>
+        <input type="text" [(ngModel)]="foodItem.restaurantId" class="form-control" id="restaurantId"
+          name="restaurantId" ngModel placeholder="Enter Restaurant Id" required #irestid="ngModel" pattern="[9]{1}[0-9]{9}">
+        <small class="text-danger" *ngIf="!irestid.valid && irestid.touched && irestid.errors"> Valid Restaurant Id is required</small>
+      </div> -->
+     <div class="form-group">
+        <label for="itemName">Item Name<sup>*</sup></label>
+        <input type="text" [(ngModel)]="foodItem.itemName" class="form-control" id="itemName"
+          name="itemName" ngModel placeholder="Enter Item Name" required #iname="ngModel"
+          pattern="[A-Z]{1}[[A-Za-z ]{1,}]*">
+        <small class="text-danger" *ngIf="!iname.valid && iname.touched && iname.errors">Valid Item Name is required, first letter should be capital</small>
+      </div>
+
+      <div class="form-group">
+        <label for="itemPrice">Item Price<sup>*</sup></label>
+        <input type="text" [(ngModel)]="foodItem.itemPrice" class="form-control" id="itemPrice"
+          name="itemPrice" pattern="[1-9]{1}[0-9]{1}" ngModel placeholder="Enter Item Price e.g 45" required #iprice="ngModel">
+        <small class="text-danger" *ngIf="!iprice.valid && iprice.touched && iprice.errors"> Valid Item Price is required, it must be a 2 digit no.</small>
+      </div>
+
+      <div class="form-group">
+        <label for="itemQuantity">Item Quantity<sup>*</sup></label>
+        <input type="text" [(ngModel)]="foodItem.itemQuantity" class="form-control" id="itemQuantity"
+          name="itemQuantity" pattern="[1-9]{1}[0-9]{1}" ngModel placeholder="Enter Item Quantity e.g. 55" required #iquantity="ngModel">
+        <small class="text-danger" *ngIf="!iquantity.valid && iquantity.touched && iquantity.errors"> Item Quantity is required, it must be a 2 digit no.</small>
+      </div>
+
+      <div class="form-group">
+        <label for="itemAvailiability">Item Availiability<sup>*</sup></label>
+        <select class="form-control" id="itemAvailiability"  [(ngModel)]="foodItem.itemAvailability" name="itemAvailiability" ngModel required>
+          <option value="undefined" disabled>Select Availiability</option>  
+          <option value="yes">Available</option>
+          <option value="no">Not available</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="itemType">Item Type<sup>*</sup></label>
+        <select class="form-control" id="itemType"  [(ngModel)]="foodItem.itemType" name="itemType" ngModel required>
+          <option value="undefined" disabled>Select Type</option>  
+          <option value="Veg">Veg</option>
+          <option value="Non Veg">Non Veg</option>
+        </select>
+      </div>
+      <br>
+      <div class="form-group">
+        <div class="row justify-content-center">
+          <button type="submit" class="btn btn-success" (click)="onSubmit()">Submit</button>
+        </div>
+    </div>
+
+    <br>
+      
+    </form>
+    <br>
+  </div>
+</div>
+<br>
+<br>
+
+</body>

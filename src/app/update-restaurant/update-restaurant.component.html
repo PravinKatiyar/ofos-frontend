@@ -1,0 +1,82 @@
+
+<div>
+<h1 align="center">RESTAURANT MANAGEMENT</h1>
+</div>
+
+<div class="row justify-content-center">
+  <div class="col-sm-6 text-left bg-muted rounded">
+    <div class="row">
+      <div class="col-sm justify-content-center">
+        <a routerLinkActive="Active" routerLink="/admindashboard"  class="btn btn-secondary">Admin Dashboard</a>
+
+      </div>
+      <div class="col-sm justify-content-center">
+        <a routerLinkActive="Active" routerLink="/Create-Restaurant" class="btn btn-secondary">Add Restaurant</a>
+
+      </div>
+      <div class="col-sm justify-content-center">
+        <a routerLinkActive="Active" routerLink="/viewAllOrders" class="btn btn-secondary">View All Orders</a>
+
+      </div>
+    </div>
+  </div>
+  </div>
+<br>
+<div class="row justify-content-center">
+  <div class="col-sm-12 text-left bg-white rounded shadow py-13">
+<table class="table">
+  <thead class="btn-info">
+    <tr>
+      <th>Id</th>
+        <th>Restaurant Name</th>
+        <th>Owner Name</th>
+        <th>PhoneNumber</th>
+        <th>Email</th>     
+        <th>Address</th>
+        <th colspan="4">Action</th> 
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <tr *ngFor="let restaurant of restaurant1">
+        <td>{{restaurant.restaurantId}}</td>
+       <td>{{restaurant.restaurantName}}</td>
+       <td>{{restaurant.ownerName}}</td>
+       <td>{{restaurant.phoneNumber}}</td>
+       <td>{{restaurant.email}}</td>
+       <td>{{restaurant.address}}</td>
+       <td><input type="button" value="Delete" (click)="deleteRestaurant(restaurant.restaurantId)" class="btn btn-danger"></td>
+       <td><input type="button" value="update" (click)="updateRestaurant(restaurant)" class="btn btn-primary"></td>
+       <td><a (click)="addfoodItemsToRestaurant(restaurant.restaurantId)" class="btn btn-warning">Add Items</a></td>
+       <td><a (click)="viewFoodItemsByRestaurant(restaurant.restaurantId)" class="btn btn-success">View Items</a></td>
+    </tr>
+  
+  </tbody>
+</table>
+
+
+
+
+<br>
+<div align="center">
+<div *ngIf="click">
+   
+    <div>
+        <h1 align="center">UPDATE RESTAURANT DETAILS</h1>
+    </div>
+    <br>
+    <div align="center">
+       <td><label for="rest" ><h5> RestaurantName : </h5> </label> <input type="text" required  name="restaurantname" [(ngModel)]="restaurant.restaurantName" class="form-group" required placeholder="Enter Restaurant Name"/><br>
+       <td><label for="rest" ><h5> Restaurant OwnerName : </h5> </label> <input type="text" name="restaurantownername" [(ngModel)]="restaurant.ownerName" required placeholder="Enter Restaurant OwnerName"/><br><br>
+       <td><label for="rest" ><h5> Restaurant PhoneNumber : </h5> </label> <input type="text" name="restaurantphonenumber" [(ngModel)]="restaurant.phoneNumber" required placeholder="Enter Restaurant PhoneNumber"/><br><br>
+       <td><label for="rest" ><h5> Restaurant Email : </h5> </label> <input type="text" name="restaurantemail" [(ngModel)]="restaurant.email" required placeholder="Enter Restaurant Email"/><br><br>
+       <td><label for="rest" ><h5> Restaurant Address :</h5> </label> <input type="text" name="resturantaddress" [(ngModel)]="restaurant.address" required placeholder="Enter Restaurant Address/"><br><br>
+       
+        <input type="button" value="Update Restaurant" (click)="updateDetails()" class="btn btn-success"/>
+    </div>  
+    <br>
+    <div>
+        <h6 align="center">{{ message }}</h6>
+    </div>
+</div>
+</div>

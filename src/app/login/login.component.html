@@ -1,0 +1,23 @@
+<h1>Sign In</h1>
+<div class="center-block">
+    <div class=" text-left bg-muted">
+        <form (ngSubmit)="SignIn()" #UserSignInForm="ngForm">
+            <p class="text-danger"><small>{{msg}}</small></p>
+            <div class="form-group">
+                <label for="email">User Email<sup>*</sup></label>
+                <input type="text" [(ngModel)]="user.email" class="form-control" name=email
+                    placeholder="Enter Email Id" required ngModel #email="ngModel">
+                <small class="text-danger" *ngIf="!email.valid && email.touched">Enter the User Email Id</small>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password<sup>*</sup></label>
+                <input type="password" [(ngModel)]="user.password" class="form-control"
+                    name=password placeholder="Enter Password" required ngModel #password="ngModel">
+                <small class="text-danger" *ngIf="!password.valid && password.touched">Enter the Password</small>
+            </div>
+            
+            <button type="submit" class="btn btn-success" [disabled]="!UserSignInForm.valid">Login</button>
+        </form>
+    </div>
+</div>

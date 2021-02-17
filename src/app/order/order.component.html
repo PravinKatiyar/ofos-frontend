@@ -1,0 +1,57 @@
+<body>
+   
+<div class="row justify-content-center">
+    <div class="col-sm-6 text-left bg-muted ">
+  <h1 align="center">Order Food Item</h1>
+
+  <div class="form-group col-md-12">
+
+     <h4> User Name:{{user.firstName}}</h4>
+        
+
+       <h4> User Phone Number:{{user.contactNo}}</h4>
+        
+       <h4> Delivery Address:{{user.address}}</h4>
+
+
+      <h4>  Item Name:{{fooditem.itemName}}</h4>
+        
+       <h4> Item Price:{{fooditem.itemPrice}}</h4>
+        
+
+        
+  <div class="form-group col-md-6">
+      <label  id="q1"for="new Bal">Quantity</label>
+    <select class="form-control" id="quantity" #quantity [(ngModel)]="quantityx" name="quantity" required>
+      <option value=1 >Select Quantity</option>  
+      <option value=1>1</option>
+      <option value=2>2</option>
+      <option value=3>3</option>
+      <option value=4>4</option>
+      <option value=5>5</option>
+      <option value=6>6</option>
+    </select>
+    </div>
+</div>
+<div class="form-group col-md-6">
+      <span>{{ fooditem.itemPrice }}</span> x
+      <span> {{quantityx}}</span>:
+      <strong>{{ (fooditem.itemPrice * quantityx) | currency:'INR' }}</strong>
+      <div>
+           <h4> Restaurant Name:{{fooditem. restaurantName}}</h4>
+
+           <h4> Restaurant Phone Number:{{fooditem. phoneNumber}}</h4>
+        
+               
+          </div>
+    </div>
+    <div class="text-center"> 
+      <h5 align="center"> {{msg}}</h5>
+        <button (click)="orderFoodItembyUser(quantity.value,user.id,fooditem.itemId)" type="button" class="btn btn-success">Order Now</button>
+    </div>
+       <br>
+        </div>
+        <br>
+    </div>
+    
+</body>

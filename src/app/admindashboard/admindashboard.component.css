@@ -1,0 +1,29 @@
+admin {
+    background-image: url("../../assets/admindashboardwall.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  h2 {
+    color:rgb(255, 255, 255);
+    font-style: italic;
+    font-size: x-large;
+    font-weight: 1000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#div1 {
+  background-color: #7646b1;
+}
+
+h1 {
+  color:rgb(3, 4, 73);
+  font-style: italic;
+  font-size: xxx-large;
+  font-weight: 1000;
+}
+
+.btn-secondary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+  background-color: #8064A2;
+}

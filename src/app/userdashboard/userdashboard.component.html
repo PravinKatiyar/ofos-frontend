@@ -1,0 +1,50 @@
+ <div class="row justify-content-center">
+  <div class="col-sm-11 text-left bg-white rounded shadow py-13">
+      <div id="div1" class="p-3 mb-2 text-white">
+          <h2>Welcome, {{user.firstName}}</h2>
+          <h5>User Id: {{user.id}}</h5>
+          <h5>Wallet Balance: ₹{{user.walletBalance}}</h5>
+          <h5>Address: {{user.address}}</h5>
+          <h6>Role: {{user.role}}</h6>
+        </div>
+      <div class="row">
+        <div class="col-sm-6">
+            <div class="card">
+              <img class="card-img" src="../../assets/orderhistory.jpg" height="200px" width="150" alt="Card image">
+              <div class="card-img-overlay">
+                    <h3 class="card-title"><strong>View Order History</strong></h3>
+                    <br>
+                    <a routerLinkActive="Active" routerLink="/viewMyOrders" class="btn btn-primary">Manage Order
+                    </a>
+                </div>
+            </div>
+        </div>        
+          <div class="col-sm-6">
+              <div class="card">
+                <img class="card-img" src="../../assets/recharge wallet.jpg" height="200px" width="150" alt="Card image">
+                <div class="card-img-overlay">
+                      <h3 class="card-title"><strong>Recharge Wallet</strong></h3>
+                      <br>
+                      <a routerLinkActive="Active" routerLink="/walletrecharge" class="btn btn-primary">Recharge Wallet</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <br>
+      <div class="row">
+          <div class="col-sm-6">
+              <div class="card">
+                <img class="card-img" src="../../assets/place order.jpg" height="200px" width="150" alt="Card image">
+                <div class="card-img-overlay">
+                      <h3 class="card-title"><strong>Order Food Items</strong></h3>
+                      <br>
+                      <a routerLinkActive="Active" routerLink="/Restaurantsforuser" class="btn btn-primary">Order Food Items
+                      </a>
+                  </div>
+              </div>
+          </div>
+           
+      </div>
+      
+      <br>
+  </div> 

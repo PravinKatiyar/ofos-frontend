@@ -1,0 +1,44 @@
+<h1 align="center">All Orders</h1>
+<div class="row justify-content-center">
+  <div class="col-sm-4 text-left bg-white rounded">
+  <div class="row">
+  </div>
+  <h5 align="center"> {{msg}}</h5>
+
+</div>
+</div>
+  <div id="background">
+      <br>
+      <div class="row justify-content-center">
+        <div class="col-sm-10 text-left bg-white rounded shadow py-13">
+          <table class="table table-striped">
+            <thead class="thead-dark">
+              <tr class="text-danger">
+                <th>Order Id</th>
+                <th>Order Date : Time</th>
+                <th>Order Status</th>
+                <th>Quantity </th>
+                <th>Total Price </th>
+                <th>User Address  </th>
+                <th>Action</th>   
+              </tr>
+            </thead>
+            <tr *ngFor="let order of orderDetails">
+              <td>{{order.orderId}}</td>
+              <td>{{order.orderDateTime}}</td>
+              <td>{{order.orderStatus}}</td>
+              <td>{{order.quantity}}</td>
+              <td>{{order.totalCost}}</td>
+              <td>{{order.userAddress}}</td>
+               <td><button (click) = "acceptOrder(order.orderId)" type="button" class="btn btn-success">Order Delivered</button></td>
+           
+       
+            </tr>
+          </table>
+        </div>
+      </div>
+      </div>
+    
+      
+  
+  

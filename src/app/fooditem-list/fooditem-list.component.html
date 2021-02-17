@@ -1,0 +1,41 @@
+<div  class="container">  
+  <div class="row justify-content-center" ><h1>FOOD ITEMS LIST</h1></div>
+  </div>
+  <div class="container">
+    <div class="row"> 
+      <div id="custom-search-input">
+        <div class="input-group col-md-10" style="text-align:center">
+          <span class="input-group-btn">
+          </span>
+        </div>
+      </div>
+    </div>
+    <table class="table table-striped" >
+      <thead>
+        <tr class="btn-info"> 
+          <th>RESTAURANT NAME</th>
+          <th>ITEM ID</th>
+          <th>ITEM NAME</th>
+          <th>ITEM PRICE</th>
+          <th>ITEM QUANTITY</th>
+          <th>ITEM AVAILIABILITY</th>
+          <th>ITEM TYPE</th>
+          <th>ACTIONS</th>
+          <th></th>
+        </tr>
+      </thead> 
+    <tbody>
+    <tr *ngFor="let foodItems of fooditems"> 
+      <td>{{foodItems.restaurantName}} </td>
+      <td>{{foodItems.itemId}}</td>
+      <td>{{foodItems.itemName}} </td>
+      <td>{{foodItems.itemPrice}} </td>
+      <td>{{foodItems.itemQuantity}}</td>
+      <td>{{foodItems.itemAvailability}}</td>
+      <td>{{foodItems.itemType}}</td>
+      <td><button (click)="updateItem(foodItems.itemId)" class="btn btn-primary active" >EDIT</button>&nbsp;</td>
+      <td><button (click)="deleteItem(foodItems.itemId)" class="btn btn-danger">DELETE</button></td>
+    </tr>
+  </tbody>
+</table>
+</div>

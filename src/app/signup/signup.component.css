@@ -1,0 +1,32 @@
+input.ng-invalid.ng-touched,select.ng-invalid.ng-touched{
+    border: 1px solid red;
+    box-shadow: 0 0 13px inset rgba(248, 3, 3, 0.274);
+}
+
+input.ng-valid.ng-touched,select.ng-valid.ng-touched{
+    border: 1px solid greenyellow;
+    box-shadow: 0 0 13px inset rgba(8, 8, 8, 0.274);
+}
+
+
+body {
+  background-image: url("../../assets/signup.gif");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: auto;
+  background-position: right;
+}
+
+h1 {
+  color:rgb(3, 4, 73);
+  font-style: italic;
+  font-size: xx-large;
+  font-weight: 1000;
+}
+
+#formtext{
+  color:rgb(7, 7, 22);
+  font-style: italic;
+  font-size:small;
+  font-weight: 1000;
+}

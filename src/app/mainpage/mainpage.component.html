@@ -1,0 +1,24 @@
+
+<header>
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <a  id="logo"class="navbar-brand">Online Food Ordering System</a>
+      <ul class="navbar-nav">
+      
+
+        
+     </ul>
+      <ul class="navbar-nav ml-auto">
+        <li>  <button type="button" class="btn btn-light" routerLinkActive="Active" routerLink="/">Home</button></li>&nbsp;&nbsp;&nbsp;
+     <li>   <button type="button" class="btn btn-light" routerLinkActive="Active" routerLink="/Signup">SignUp</button></li>&nbsp;&nbsp;&nbsp;
+        <li>
+
+        <button type="button" class="btn btn-light" (click)="logout()" *ngIf="currentstatus.status">Log Out</button></li>&nbsp;&nbsp;&nbsp;
+          
+        <li>   <button type="button" class="btn btn-light" routerLinkActive="Active" routerLink="/aboutus">About Us</button></li>
+
+        
+       
+      </ul>
+    </nav>
+  </div>

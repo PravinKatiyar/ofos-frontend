@@ -1,0 +1,11 @@
+body {
+  background-image: linear-gradient(225deg, rgb(33, 33, 212), rgb(255, 255, 255));
+
+  }
+
+  h1 {
+    color:rgb(3, 4, 73);
+    font-style: italic;
+    font-size: xxx-large;
+    font-weight: 1000;
+}

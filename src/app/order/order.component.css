@@ -1,0 +1,39 @@
+h4 {
+    color:rgb(68, 6, 4);
+    font-style: italic;
+    font-size: x-large;
+    font-weight: 1000;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  h5 {
+    color:rgb(255, 8, 0);
+    font-style: italic;
+    font-size: x-large;
+    font-weight: 1000;
+    
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  #q1 {
+    color:rgb(9, 73, 156);
+    font-style: italic;
+    font-size: x-large;
+    font-weight: 1000;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  h1 {
+    color:rgb(22, 5, 66);
+    font-style: italic;
+    font-size: xxx-large;
+    font-weight: 1000;
+  }
+
+  body {
+    background-image: url("../../assets/signup.gif");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: auto;
+    background-position: right;
+  }

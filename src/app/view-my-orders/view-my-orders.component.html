@@ -1,0 +1,55 @@
+  <div id="background">
+     
+      <h1 align="center">MY ORDER HISTORY</h1>
+      <br>
+      <h5 align="center"> {{msg}}</h5>
+      <div class="row justify-content-center">
+        <div class="col-sm-12 text-left bg-white rounded shadow py-13">
+          <table class="table table-striped">
+            <thead>
+              <tr class="btn-warning">
+                <th>Order Id</th>
+                <th>Date : Time</th>
+               
+                <th>Quantity</th>
+                <th>Total Price</th>
+                <th>Address</th>
+                <th>Restaurant Name</th>
+                <th>Restaurant Phone Number</th> 
+                <th>Action</th>   
+                <th>Action</th>          
+              </tr>
+            </thead>
+            <tr *ngFor="let order of orderDetails | paginate:{id:'listing_pagination',
+            itemsPerPage:6,
+            currentPage:page,
+            totalItems:totalRecords}">
+              <td>{{order.orderId}}</td>
+              <td>{{order.orderDateTime}}</td>
+              
+              <td>{{order.quantity}}</td>
+              <td>{{order.totalCost}}</td>
+              <td>{{order.userAddress}}</td>
+              <td>{{order.restaurantName}}</td>
+              <td>{{order.phoneNumber}}</td>
+
+            <td>
+                <button (click)="cancelBooking(order.orderId)" type="button" class="btn btn-danger">Cancel Order</button>
+              </td> 
+              <td>
+                <button type="button"  (click)= "trackorder(order.orderId)" class="btn btn-primary" >Track Order</button>
+              </td>
+            
+            </tr>
+           
+          </table>
+          <div align="center">
+            <pagination-controls id="listing_pagination" maxSize="5" directionLinks="true" (pageChange)="page=$event"></pagination-controls>
+          </div>
+        </div>
+      </div>
+      </div>
+      
+      
+  
+  

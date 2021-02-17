@@ -1,0 +1,53 @@
+
+<div  class="container">  
+
+  <div class="row justify-content-center" ><h1 align="center">{{restaurantName}} FOOD ITEMS LIST </h1></div>
+ 
+        <br>
+        <br>
+        <div class="form-outline">
+          <input type="text" id="search" class="form-control"
+           placeholder="Search by Food Items" [(ngModel)]="itemtoSearch"
+          >
+        </div>
+        <br>
+  
+    <table class="table table-striped" >
+      <thead>
+        <tr class="btn-danger">
+         
+         
+          <th>ITEM NAME</th>
+          <th>ITEM PRICE</th>
+          <th>ITEM QUANTITY</th>
+          <th>ITEM AVAILIABILITY</th>
+          <th>ITEM TYPE</th>
+          <th>ACTIONS</th>
+
+        </tr>
+      </thead> 
+    <tbody>
+    <tr *ngFor="let foodItems of fooditems | paginate:{id:'listing_pagination',
+    itemsPerPage:8,
+    currentPage:page,
+    totalItems:totalRecords}| itemSearch:itemtoSearch">
+      
+      
+      
+      <td>{{foodItems.itemName}} </td>
+      <td>{{foodItems.itemPrice}} </td>
+      <td>{{foodItems.itemQuantity}}</td>
+      <td>{{foodItems.itemAvailability}}</td>
+
+      <td>{{foodItems.itemType}}</td>
+     
+      <td>
+          <button class="btn btn-warning ac"  (click)= "orderItem(foodItems.itemId)" >BUY</button>&nbsp;</td>
+      
+    </tr>
+  </tbody>
+</table>
+<div align="center">
+  <pagination-controls id="listing_pagination" maxSize="5" directionLinks="true" (pageChange)="page=$event"></pagination-controls>
+</div>
+</div>
